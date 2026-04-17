@@ -8,19 +8,36 @@ export default function EntryPage() {
     <div className="h-screen min-h-[700px] lg:overflow-hidden font-satoshi flex flex-col items-center justify-center relative bg-slate-50 text-slate-600 selection:bg-blue-600 selection:text-white">
       
       {/* --- Premium Light SaaS Background --- */}
-      <div className="fixed inset-0 z-0 pointer-events-none flex items-center justify-center overflow-hidden">
-        {/* Subtle Grid Pattern */}
+      <div className="fixed inset-0 z-0 pointer-events-none flex items-center justify-center overflow-hidden bg-slate-50">
+        
+        {/* Unsplash Image Background */}
+        <div 
+          className="absolute inset-0 opacity-[0.25] mix-blend-multiply"
+          style={{ 
+            backgroundImage: `url('https://images.unsplash.com/photo-1675445991060-14c7f43d8fd6?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`, 
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'grayscale(0.7) contrast(1.1)'
+          }}
+        ></div>
+
+        {/* Subtle Dot Pattern Overlay */}
         <div className="absolute inset-0 opacity-[0.4]" style={{ 
-          backgroundImage: `linear-gradient(to right, #cbd5e1 1px, transparent 1px), linear-gradient(to bottom, #cbd5e1 1px, transparent 1px)`, 
-          backgroundSize: '48px 48px' 
+          backgroundImage: `radial-gradient(#94a3b8 1.5px, transparent 1.5px)`, 
+          backgroundSize: '24px 24px' 
         }}></div>
         
-        {/* Soft Glows */}
-        <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] bg-blue-200/40 rounded-full blur-[100px] mix-blend-multiply"></div>
-        <div className="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-orange-200/40 rounded-full blur-[100px] mix-blend-multiply"></div>
+        {/* Premium Gradient Mesh (Soft Glows) */}
+        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] bg-blue-200/50 rounded-full blur-[120px] mix-blend-multiply opacity-70"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] bg-orange-100/60 rounded-full blur-[120px] mix-blend-multiply opacity-70"></div>
+        <div className="absolute top-[20%] right-[20%] w-[30vw] h-[30vw] max-w-[600px] max-h-[600px] bg-purple-100/50 rounded-full blur-[100px] mix-blend-multiply opacity-60"></div>
         
-        {/* Gradient Mask */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50/50 via-transparent to-slate-50"></div>
+        {/* Gradient Mask for fading edges */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-50/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-50/70 via-transparent to-slate-50/70"></div>
+        
+        {/* Central Readability Glow */}
+        <div className="absolute top-1/2 left-[30%] -translate-y-1/2 -translate-x-1/2 w-[60vw] h-[80vh] bg-white/60 rounded-full blur-[120px]"></div>
       </div>
 
       {/* --- Main Content (2-Column Layout on Desktop) --- */}
@@ -78,25 +95,22 @@ export default function EntryPage() {
 
           {/* HotelCare Card */}
           <Link href="/home" className="group block">
-            <div className="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 transition-all duration-300 overflow-hidden">
+            <div className="relative p-6 rounded-2xl bg-white/80 backdrop-blur-xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.08)] hover:border-blue-300/60 transition-all duration-500 overflow-hidden transform hover:-translate-y-1">
               {/* Glow Effect */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-100 transition-all duration-500"></div>
+              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-blue-100/80 to-transparent rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
               
-              <div className="relative z-10 flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center border border-blue-100 text-blue-600 group-hover:scale-110 transition-transform duration-300">
-                  <FaRegBuilding className="text-xl" />
+              <div className="relative z-10 flex items-start gap-5">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100/50 flex items-center justify-center border border-blue-100/80 text-blue-600 shadow-sm group-hover:scale-110 group-hover:shadow-blue-200 transition-all duration-500">
+                  <FaRegBuilding className="text-2xl" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-1 flex items-center gap-2">
+                <div className="flex-1 pt-1">
+                  <h3 className="text-lg font-extrabold text-slate-900 mb-1.5 flex items-center justify-between">
                     Hotel Care
+                    <FaChevronRight className="w-3 h-3 text-slate-300 group-hover:text-blue-500 group-hover:translate-x-1 transition-all duration-300" />
                   </h3>
-                  <p className="text-slate-500 text-xs leading-relaxed mb-3">
+                  <p className="text-slate-500 text-sm leading-relaxed mb-0 font-medium">
                     Discover our expertise in hospitality construction and the execution of high-end projects.
                   </p>
-                  <div className="flex items-center text-blue-600 font-semibold text-xs group-hover:text-blue-700">
-                    <span>Explore Division</span>
-                    <FaChevronRight className="ml-1 w-2.5 h-2.5 group-hover:translate-x-1 transition-transform" />
-                  </div>
                 </div>
               </div>
             </div>
@@ -104,25 +118,22 @@ export default function EntryPage() {
 
           {/* EPW Card */}
           <Link href="/epw" className="group block">
-            <div className="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-orange-500/10 hover:border-orange-300 transition-all duration-300 overflow-hidden">
+            <div className="relative p-6 rounded-2xl bg-white/80 backdrop-blur-xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(249,115,22,0.08)] hover:border-orange-300/60 transition-all duration-500 overflow-hidden transform hover:-translate-y-1">
               {/* Glow Effect */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-50 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2 group-hover:bg-orange-100 transition-all duration-500"></div>
+              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-orange-100/80 to-transparent rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
               
-              <div className="relative z-10 flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center border border-orange-100 text-orange-600 group-hover:scale-110 transition-transform duration-300">
-                  <FaWrench className="text-xl" />
+              <div className="relative z-10 flex items-start gap-5">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100/50 flex items-center justify-center border border-orange-100/80 text-orange-600 shadow-sm group-hover:scale-110 group-hover:shadow-orange-200 transition-all duration-500">
+                  <FaWrench className="text-2xl" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-1 flex items-center gap-2">
+                <div className="flex-1 pt-1">
+                  <h3 className="text-lg font-extrabold text-slate-900 mb-1.5 flex items-center justify-between">
                     EPW Technical
+                    <FaChevronRight className="w-3 h-3 text-slate-300 group-hover:text-orange-500 group-hover:translate-x-1 transition-all duration-300" />
                   </h3>
-                  <p className="text-slate-500 text-xs leading-relaxed mb-3">
+                  <p className="text-slate-500 text-sm leading-relaxed mb-0 font-medium">
                     Delve into our advanced solutions for electrical and plumbing systems. Reliable and future-proof.
                   </p>
-                  <div className="flex items-center text-orange-600 font-semibold text-xs group-hover:text-orange-700">
-                    <span>Explore Division</span>
-                    <FaChevronRight className="ml-1 w-2.5 h-2.5 group-hover:translate-x-1 transition-transform" />
-                  </div>
                 </div>
               </div>
             </div>

@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
         'quicksand': ['Quicksand', 'sans-serif'],
+        'satoshi': ['Satoshi', 'sans-serif'],
       },
       colors: {
         'navy': '#0A1628',

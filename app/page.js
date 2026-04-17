@@ -93,47 +93,57 @@ export default function EntryPage() {
             <p className="text-xs text-slate-500 mt-1">Select the section that best suits your needs.</p>
           </div>
 
-          {/* HotelCare Card */}
-          <Link href="/home" className="group block">
-            <div className="relative p-6 rounded-2xl bg-white/80 backdrop-blur-xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.08)] hover:border-blue-300/60 transition-all duration-500 overflow-hidden transform hover:-translate-y-1">
-              {/* Glow Effect */}
-              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-blue-100/80 to-transparent rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
+          {/* HotelCare Button */}
+          <Link href="/home" className="group block w-full">
+            <div className="relative p-1 rounded-full bg-slate-900 border border-slate-800 shadow-xl hover:shadow-[0_15px_30px_rgba(37,99,235,0.25)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+              {/* Subtle Blue Glow inside button */}
+              <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
-              <div className="relative z-10 flex items-start gap-5">
-                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100/50 flex items-center justify-center border border-blue-100/80 text-blue-600 shadow-sm group-hover:scale-110 group-hover:shadow-blue-200 transition-all duration-500">
-                  <FaRegBuilding className="text-2xl" />
+              <div className="relative z-10 flex items-center justify-between bg-slate-900 rounded-full px-5 py-3">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500 transition-all duration-300">
+                    <FaRegBuilding className="text-lg" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-extrabold text-white tracking-wide uppercase">
+                      Hotel Care
+                    </h3>
+                    <p className="text-slate-400 text-xs font-medium">
+                      Hospitality Construction
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1 pt-1">
-                  <h3 className="text-lg font-extrabold text-slate-900 mb-1.5 flex items-center justify-between">
-                    Hotel Care
-                    <FaChevronRight className="w-3 h-3 text-slate-300 group-hover:text-blue-500 group-hover:translate-x-1 transition-all duration-300" />
-                  </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-0 font-medium">
-                    Discover our expertise in hospitality construction and the execution of high-end projects.
-                  </p>
+                
+                <div className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500 transition-all duration-300">
+                  <FaChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>
             </div>
           </Link>
 
-          {/* EPW Card */}
-          <Link href="/epw" className="group block">
-            <div className="relative p-6 rounded-2xl bg-white/80 backdrop-blur-xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(249,115,22,0.08)] hover:border-orange-300/60 transition-all duration-500 overflow-hidden transform hover:-translate-y-1">
-              {/* Glow Effect */}
-              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-orange-100/80 to-transparent rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
+          {/* EPW Button */}
+          <Link href="/epw" className="group block w-full mt-2">
+            <div className="relative p-1 rounded-full bg-slate-900 border border-slate-800 shadow-xl hover:shadow-[0_15px_30px_rgba(249,115,22,0.25)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+              {/* Subtle Orange Glow inside button */}
+              <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
-              <div className="relative z-10 flex items-start gap-5">
-                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100/50 flex items-center justify-center border border-orange-100/80 text-orange-600 shadow-sm group-hover:scale-110 group-hover:shadow-orange-200 transition-all duration-500">
-                  <FaWrench className="text-2xl" />
+              <div className="relative z-10 flex items-center justify-between bg-slate-900 rounded-full px-5 py-3">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-orange-400 group-hover:bg-orange-600 group-hover:text-white group-hover:border-orange-500 transition-all duration-300">
+                    <FaWrench className="text-lg" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-extrabold text-white tracking-wide uppercase">
+                      EPW Technical
+                    </h3>
+                    <p className="text-slate-400 text-xs font-medium">
+                      Electrical & Plumbing
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1 pt-1">
-                  <h3 className="text-lg font-extrabold text-slate-900 mb-1.5 flex items-center justify-between">
-                    EPW Technical
-                    <FaChevronRight className="w-3 h-3 text-slate-300 group-hover:text-orange-500 group-hover:translate-x-1 transition-all duration-300" />
-                  </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-0 font-medium">
-                    Delve into our advanced solutions for electrical and plumbing systems. Reliable and future-proof.
-                  </p>
+                
+                <div className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 group-hover:bg-orange-600 group-hover:text-white group-hover:border-orange-500 transition-all duration-300">
+                  <FaChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>
             </div>

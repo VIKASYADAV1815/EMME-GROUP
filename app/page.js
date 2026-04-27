@@ -94,27 +94,27 @@ export default function EntryPage() {
           </div>
 
           {/* HotelCare Button */}
-          <Link href="/home" className="group block w-full">
-            <div className="relative p-1 rounded-full bg-slate-900 border border-slate-800 shadow-xl hover:shadow-[0_15px_30px_rgba(37,99,235,0.25)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+          <Link href="/home" className="group block w-full sm:w-auto">
+            <div className="relative p-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-xl hover:shadow-[0_15px_30px_rgba(37,99,235,0.15)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
               {/* Subtle Blue Glow inside button */}
-              <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
-              <div className="relative z-10 flex items-center justify-between bg-slate-900 rounded-full px-5 py-3">
+              <div className="relative z-10 flex items-center justify-between bg-white/40 backdrop-blur-lg rounded-full px-5 py-2.5 min-w-[280px]">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-white/50 border border-white/40 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500 shadow-sm transition-all duration-300">
                     <FaRegBuilding className="text-lg" />
                   </div>
-                  <div>
-                    <h3 className="text-sm font-extrabold text-white tracking-wide uppercase">
+                  <div className="text-left">
+                    <h3 className="text-sm font-extrabold text-slate-900 tracking-wide uppercase">
                       Hotel Care
                     </h3>
-                    <p className="text-slate-400 text-xs font-medium">
+                    <p className="text-blue-700 text-[11px] font-bold">
                       Hospitality Construction
                     </p>
                   </div>
                 </div>
                 
-                <div className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500 transition-all duration-300">
+                <div className="w-8 h-8 rounded-full bg-white/50 border border-white/40 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-500 shadow-sm transition-all duration-300 ml-4">
                   <FaChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>
@@ -122,27 +122,27 @@ export default function EntryPage() {
           </Link>
 
           {/* EPW Button */}
-          <Link href="/epw" className="group block w-full mt-2">
-            <div className="relative p-1 rounded-full bg-slate-900 border border-slate-800 shadow-xl hover:shadow-[0_15px_30px_rgba(249,115,22,0.25)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+          <Link href="/epw" className="group block w-full sm:w-auto mt-2 lg:mt-0">
+            <div className="relative p-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-xl hover:shadow-[0_15px_30px_rgba(249,115,22,0.15)] hover:-translate-y-1 transition-all duration-300 overflow-hidden">
               {/* Subtle Orange Glow inside button */}
-              <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-orange-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
-              <div className="relative z-10 flex items-center justify-between bg-slate-900 rounded-full px-5 py-3">
+              <div className="relative z-10 flex items-center justify-between bg-white/40 backdrop-blur-lg rounded-full px-5 py-2.5 min-w-[280px]">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-orange-400 group-hover:bg-orange-600 group-hover:text-white group-hover:border-orange-500 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-white/50 border border-white/40 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white group-hover:border-orange-500 shadow-sm transition-all duration-300">
                     <FaWrench className="text-lg" />
                   </div>
-                  <div>
-                    <h3 className="text-sm font-extrabold text-white tracking-wide uppercase">
+                  <div className="text-left">
+                    <h3 className="text-sm font-extrabold text-slate-900 tracking-wide uppercase">
                       EPW Technical
                     </h3>
-                    <p className="text-slate-400 text-xs font-medium">
+                    <p className="text-orange-700 text-[11px] font-bold">
                       Electrical & Plumbing
                     </p>
                   </div>
                 </div>
                 
-                <div className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 group-hover:bg-orange-600 group-hover:text-white group-hover:border-orange-500 transition-all duration-300">
+                <div className="w-8 h-8 rounded-full bg-white/50 border border-white/40 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white group-hover:border-orange-500 shadow-sm transition-all duration-300 ml-4">
                   <FaChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import FloatingWhatsApp from "../../components/FloatingWhatsApp";
 
 export default function EPWLayout({ children }) {
   return (
@@ -9,6 +10,7 @@ export default function EPWLayout({ children }) {
         {children}
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

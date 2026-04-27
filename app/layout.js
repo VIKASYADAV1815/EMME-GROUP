@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Montserrat, Quicksand } from "next/font/google";
 import LayoutWrapper from "../components/LayoutWrapper";
-import FloatingWhatsApp from "../components/FloatingWhatsApp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -28,7 +27,6 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${montserrat.variable} ${quicksand.variable}`}>
       <body className="font-montserrat bg-white text-gray-900">
         <LayoutWrapper>{children}</LayoutWrapper>
-        <FloatingWhatsApp />
       </body>
     </html>
   );

@@ -7,8 +7,8 @@ import Footer from "./Footer";
 export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
   
-  // Hide Navigation and Footer on the entry page (/), and EPW page (/epw)
-  const isHiddenPage = pathname === "/" || pathname === "/epw";
+  // Hide Navigation and Footer on the entry page (/), and all EPW pages (/epw and /epw/*)
+  const isHiddenPage = pathname === "/" || pathname.startsWith("/epw");
 
   return (
     <>
